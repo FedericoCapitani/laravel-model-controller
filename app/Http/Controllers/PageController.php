@@ -8,9 +8,7 @@ use App\Movie;
 class PageController extends Controller
 {
     public function index() {
-        $data = 'pippo';
         $movies = Movie::all();
-        dd($movies);
-        return view('home', compact('data'));
+        return view('home', compact('movies'));
     }
 }

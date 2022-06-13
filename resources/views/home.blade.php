@@ -8,18 +8,26 @@
 
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{asset('css/app.css')}}">
+        @yield('custom-css')
 
         <!-- Styles -->
         <style>
-            *{
-                font-family: 'Nunito', sans-serif;
-                margin: 0;
-                padding: 0;
-                box-sizing: border-box;
-            }
+            
         </style>
     </head>
     <body>
-       <h1> {{$data}} </h1>
+       <h1>Movies</h1>
+       <div class="container">
+        @foreach ($movies as $movie)
+        <div class="card">
+            <p>Titolo: {{$movie['title']}} </p>
+            <p>Titolo originale: {{$movie['original_title']}} </p>
+            <p>Nazionalità: {{$movie['nationality']}} </p>
+            <p>Data di rilascio: {{$movie['date']}} </p>
+            <p>Ratine: {{$movie['vote']}} </p>
+        </div>
+        @endforeach
+       </div>
     </body>
 </html>
