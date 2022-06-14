@@ -25,7 +25,7 @@
             <p>Titolo originale: {{$movie['original_title']}} </p>
             <p>Nazionalità: {{$movie['nationality']}} </p>
             <p>Data di rilascio: {{$movie['date']}} </p>
-            <p>Ratine: {{$movie['vote']}} </p>
+            <p>Rating: {{$movie['vote']}} </p>
         </div>
         @endforeach
        </div>
